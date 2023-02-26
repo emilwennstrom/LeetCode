@@ -22,18 +22,19 @@ public class TwoSum {
     }
 
     public static int[] twoSum(int[] nums, int target) {
-
         HashMap<Integer, Integer> hashMap = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
-            int num = nums[i];
-            int diff = target - num;
-            if (hashMap.containsKey(diff)) {
-                return new int[] {hashMap.get(diff), i};
+            int diff = target - nums[i];
+            if (hashMap.containsKey(nums[i])) {
+                return new int[] {hashMap.get(nums[i]), i};
             }
-            hashMap.put(num, i);
+            hashMap.put(diff, i);
         }
-        return null;
+
+
+        return new int[]{};
+
     }
 
 
