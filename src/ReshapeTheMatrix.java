@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class ReshapeTheMatrix {
 	public static int[][] matrixReshape(int[][] mat, int r, int c) {
